@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palermo Codeína</title>
+
+<!-- Fuentes futuristas/retro -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --fondo: #120A2A;
+  --violeta-neon: #FF0090;
+  --verde-neon: #39FF14;
+  --rosa-fluo: #FF77CC;
+  --texto-claro: #E0E0E0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background-color: var(--fondo);
+  color: var(--texto-claro);
+  overflow-x: hidden;
+}
+
+header {
+  text-align: center;
+  padding: 5vh 2vw;
+}
+
+h1 {
+  color: var(--violeta-neon);
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+h2 {
+  color: var(--verde-neon);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  max-width: 800px;
+  margin: 1rem auto;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: var(--texto-claro);
+  text-align: center;
+}
+
+section {
+  padding: 5vh 2vw;
+  transition: all 0.3s ease;
+}
+
+/* Contenido oculto/interactivo */
+.interactivo {
+  color: var(--rosa-fluo);
+  cursor: pointer;
+  text-decoration: underline dotted;
+  transition: color 0.3s ease;
+}
+
+.interactivo:hover {
+  color: var(--verde-neon);
+}
+
+.contenido-oculto {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+
+.contenido-oculto.visible {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 3rem 2vw;
+  color: var(--texto-claro);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  border-top: 1px solid var(--violeta-neon);
+}
+
+/* Glow effect */
+h1, h2, .interactivo {
+  text-shadow: 0 0 8px var(--violeta-neon), 0 0 15px var(--verde-neon);
+}
+
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Palermo Codeína</h1>
+</header>
+
+<section>
+  <p>
+    Palermo Codeína no es un estilo que se pueda replicar. Es un universo sensorial y cultural, un catálogo vivo que reúne música, imágenes y artistas del under argentino. 
+    Solo los curiosos que se adentran descubren su esencia.
+  </p>
+  <p>
+    Haz click en <span class="interactivo" onclick="toggleContenido()">este texto</span> si quieres sentir un poco más de su mundo.
+  </p>
+  <div class="contenido-oculto" id="extraContenido">
+    <p>
+      Aquí se mezclan artistas under, visuales psicodélicos y humor urbano. Cada elemento es inimitable, y navegarlo es experimentar Palermo Codeína en su totalidad.  
+      Su identidad única se percibe, pero no se copia.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>El catálogo</h2>
+  <p>
+    En la web, los artistas se dividen en 4 categorías: <strong>Mainstream, Especial, Mítico y Under</strong>.  
+    Cada categoría muestra talentos que conforman el ecosistema único del trap argentino, en constante evolución.
+  </p>
+</section>
+
+<footer>
+  Palermo Codeína &copy; 2026 – Un universo único y anónimo
+</footer>
+
+<script>
+function toggleContenido() {
+  const contenido = document.getElementById('extraContenido');
+  contenido.classList.toggle('visible');
+}
+</script>
+
+</body>
+</html>
